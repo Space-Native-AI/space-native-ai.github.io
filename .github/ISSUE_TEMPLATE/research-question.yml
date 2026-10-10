@@ -1,0 +1,50 @@
+name: "Research question"
+description: "Contribute an open problem for machine learning and autonomous science in space."
+title: "[Research] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to **Space-Native AI**. This discussion is public. Please do not share confidential, unpublished, patent-sensitive or personal information.
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Research direction
+      options:
+        - Learning in Space
+        - Autonomy in Space
+        - Bio in Space
+        - Living in Space
+        - Cross-disciplinary
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Open scientific or machine-learning question
+      description: Aim for 100–250 words. What is not yet understood?
+      placeholder: What is the scientific or learning problem?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Why does space change the problem?
+      description: Explain relevant physics, autonomy or mission constraints.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: How could progress be evaluated?
+      description: Optional benchmark, simulation, metric or hypothesis.
+    validations:
+      required: false
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Public submission acknowledgment
+      options:
+        - label: I understand this issue and my GitHub username are public; I have not included confidential or third-party restricted information.
+          required: true
