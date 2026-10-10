@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: About submissions & privacy
+    url: https://space-native-ai.github.io/privacy.html
+    about: Read before posting; contributions to GitHub Issues are public.
