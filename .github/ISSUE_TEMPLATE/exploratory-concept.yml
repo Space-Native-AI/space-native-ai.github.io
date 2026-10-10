@@ -1,0 +1,50 @@
+name: "Exploratory concept"
+description: "Share a non-confidential idea for an intelligent experiment beyond Earth."
+title: "[Concept] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is an open scientific thought experiment, not a launch competition or an offer of spaceflight. Please share only information you are comfortable making public.
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Track
+      options:
+        - One Liter in Space
+        - Learning in Space
+        - Autonomy in Space
+        - Bio in Space
+        - Living in Space
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: concept
+    attributes:
+      label: What would you investigate?
+      description: Briefly describe your proposed experiment or conceptual AI system.
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: What could it teach us?
+      description: Describe the potential scientific insight or testable hypothesis.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Key constraints
+      description: Optional physical, energy, autonomy, volume or computational limits.
+    validations:
+      required: false
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Public submission acknowledgment
+      options:
+        - label: I understand this is public, keep rights to my original work, and have not disclosed confidential or patent-sensitive material.
+          required: true
