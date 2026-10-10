@@ -1,7 +1,137 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07101b"><meta name="description" content="Contribute open research questions to Space-Native AI on learning, autonomy and scientific discovery in space."><title>Contribute — Space-Native AI</title><link rel="canonical" href="https://space-native-ai.github.io/contribute.html"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true"></span><span class="wordmark">Space-Native AI</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button><nav id="site-nav" class="nav-links" aria-label="Primary"><a href="index.html">Initiative</a><a href="index.html#research">Research</a><a href="event-2026.html">WSW 2026</a><a href="about.html">About</a><a class="nav-cta" href="contribute.html" aria-current="page">Contribute ↗</a></nav></div></header>
-<main id="main"><section class="page-hero"><div class="container"><div class="eyebrow"><span class="dash"></span>Open call · 2026</div><h1>Contribute an<br>open question.</h1><p class="lead">What should the research community investigate as learning and scientific intelligence move beyond Earth?</p><div class="meta"><span>100–250 words suggested</span><span>Public contributions</span><span>Follow-up until 15 Nov 2026</span></div></div></section>
-<section class="section"><div class="container"><div class="section-intro"><div class="eyebrow">Choose a format</div><h2>Two simple ways to participate.</h2><p>No new experiments, unpublished results or proprietary technical details are necessary.</p></div><div class="grid-2"><div class="panel"><div class="number">01 / RESEARCH PROBLEM</div><h3>Propose a research question</h3><p>Identify a machine-learning or autonomous-science problem grounded in non-terrestrial physical conditions or mission constraints. Suggest why it matters and how progress might be evaluated.</p><div style="margin-top:25px"><a class="btn primary" href="https://github.com/space-native-ai/space-native-ai.github.io/issues/new?template=research-question.yml" target="_blank" rel="noopener noreferrer">Open research template <span class="arrow">↗</span></a></div></div><div class="panel"><div class="number">02 / EXPLORATORY CONCEPT</div><h3>Share a scientific concept</h3><p>Describe an idea for an intelligent experiment or research setting — for example, One Liter in Space, a simulated orbital lab or bio-inspired autonomous measurement.</p><div style="margin-top:25px"><a class="btn" href="https://github.com/space-native-ai/space-native-ai.github.io/issues/new?template=exploratory-concept.yml" target="_blank" rel="noopener noreferrer">Open concept template <span class="arrow">↗</span></a></div></div></div></div></section>
-<section class="section alt"><div class="container two-col"><div><div class="eyebrow">Submission guidance</div><h2>A question worth discussing beats an oversized proposal.</h2><p>We welcome researchers, engineers, students and interested contributors from around the world.</p></div><div class="steps"><div class="step"><div><h3>Define the challenge</h3><p>What do we need to understand or learn that is not already straightforward in terrestrial settings?</p></div></div><div class="step"><div><h3>Make the space constraint meaningful</h3><p>Specify whether the issue involves dynamics, autonomy, communications, computation, power, materials or experimental cost.</p></div></div><div class="step"><div><h3>Outline evidence</h3><p>How would the community know whether a future approach succeeded? A metric, simulation or testable hypothesis is enough.</p></div></div></div></div></section>
-<section class="section"><div class="container"><div class="callout"><div class="eyebrow">Before posting</div><h2>Contribute openly. Protect unpublished work.</h2><p>All GitHub Issues are public and attached to the submitting GitHub account. Do not submit personal details, confidential designs, patent-sensitive material, private research data or third-party copyrighted content without permission.</p><p>Contributors retain their rights in their original submissions. A submission does not grant us permission to reproduce it in an external publication or commercial product without further authorization. We may reply and discuss publicly within the issue itself. Please read the <a class="link-text" href="privacy.html">submission and privacy notice ↗</a>.</p><a class="btn primary" href="https://github.com/space-native-ai/space-native-ai.github.io/issues" target="_blank" rel="noopener noreferrer">View community questions <span class="arrow">↗</span></a></div></div></section></main>
+<main id="main">
+<section class="page-hero starfield"><div class="container">
+  <div class="eyebrow"><span class="dash"></span>Cycle I · Open call · 10 Oct–15 Nov 2026</div>
+  <h1>Bring a question.<br>Shape the field.</h1>
+  <p class="lead">Submit a short research question or project concept for the first Space-Native AI cycle. We will synthesize the submissions, give editorial feedback on selected contributions, invite community input, and use the strongest themes to guide follow-up activities.</p>
+  <div class="meta"><span>Online & international</span><span>100–250 words suggested</span><span>Non-confidential submissions only</span></div>
+</div></section>
+
+<section class="section" id="submit"><div class="container">
+  <div class="section-intro">
+    <div class="eyebrow"><span class="dash"></span>Submit to Cycle I</div>
+    <h2>Write your contribution here.</h2>
+    <p>This form prepares a structured public GitHub submission. Nothing is sent by this website until you continue to GitHub and confirm the issue there.</p>
+  </div>
+
+  <div class="submission-shell">
+    <form id="contribution-form" class="submission-form">
+      <div class="field-grid">
+        <label class="form-field">
+          <span>Contribution type</span>
+          <select id="contribution-type" name="type" required>
+            <option value="Research Question">Research Question</option>
+            <option value="Project Concept">Project / Experimental Concept</option>
+            <option value="One Liter in Space">One Liter in Space concept</option>
+          </select>
+        </label>
+
+        <label class="form-field">
+          <span>Research area</span>
+          <select id="research-area" name="area" required>
+            <option value="">Select an area</option>
+            <option>Learning under altered physical conditions</option>
+            <option>Autonomous scientific discovery</option>
+            <option>Intelligence under extreme constraints</option>
+            <option>Robotics / Physical AI</option>
+            <option>Bio in Space</option>
+            <option>Living / Farming in Space</option>
+            <option>One Liter in Space</option>
+            <option>Cross-disciplinary / Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="form-field">
+        <span>Short title</span>
+        <input id="submission-title" name="title" type="text" maxlength="120" placeholder="e.g. Active experiment selection under intermittent communication" required>
+      </label>
+
+      <label class="form-field">
+        <span>Your core research question or project concept</span>
+        <textarea id="core-idea" name="core" rows="6" maxlength="2500" placeholder="What should be investigated or built? Keep it concrete enough that another researcher can understand the problem." required></textarea>
+      </label>
+
+      <label class="form-field">
+        <span>Why is this space-native?</span>
+        <textarea id="space-relevance" name="space" rows="4" maxlength="1800" placeholder="What changes because of the physical environment, autonomy requirement, communication limits, experimental scarcity, or other space-specific conditions?" required></textarea>
+      </label>
+
+      <label class="form-field">
+        <span>What would progress or success look like?</span>
+        <textarea id="evaluation" name="evaluation" rows="4" maxlength="1800" placeholder="A metric, simulation, experiment, benchmark, observation, or falsifiable outcome is enough." required></textarea>
+      </label>
+
+      <label class="form-field">
+        <span>What feedback, collaborator, or next step would be useful? <em>Optional</em></span>
+        <textarea id="followup" name="followup" rows="3" maxlength="1200" placeholder="For example: an ML collaborator, orbital systems expertise, a biology partner, simulation support, or simply critical feedback."></textarea>
+      </label>
+
+      <div class="field-grid">
+        <label class="form-field">
+          <span>Display name <em>Optional</em></span>
+          <input id="display-name" name="displayName" type="text" maxlength="100" placeholder="Name or team name for community credit">
+        </label>
+        <label class="form-field">
+          <span>Affiliation <em>Optional</em></span>
+          <input id="affiliation" name="affiliation" type="text" maxlength="120" placeholder="University, company, lab, or independent">
+        </label>
+      </div>
+
+      <label class="check-row">
+        <input id="featured-consent" type="checkbox">
+        <span>I am happy for this public submission to be considered for a <strong>Space-Native AI 2026 Featured Contribution</strong> and for the organizers to contact me through GitHub about related community follow-up.</span>
+      </label>
+
+      <label class="check-row">
+        <input id="public-confirm" type="checkbox" required>
+        <span>I understand that the final GitHub Issue is public, and I will not include confidential, patent-sensitive, private, or third-party material I do not have permission to share.</span>
+      </label>
+
+      <div class="form-actions">
+        <button class="btn primary" type="submit">Continue to GitHub submission <span class="arrow">↗</span></button>
+        <button class="btn" type="button" id="copy-submission">Copy formatted draft</button>
+      </div>
+      <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+      <p class="fineprint">A GitHub account is required for the final public submission. The draft stays in your browser until you click the button above.</p>
+    </form>
+
+    <aside class="submission-aside">
+      <div class="kicker">What happens next</div>
+      <h3>Cycle I is a research-community building process.</h3>
+      <ol class="cycle-list">
+        <li><strong>Synthesis.</strong> Contributions are grouped into emerging research themes.</li>
+        <li><strong>Feedback.</strong> Selected submissions receive concise editorial feedback and may be invited into public discussion.</li>
+        <li><strong>Community input.</strong> Questions and themes may be opened for comments from other participants.</li>
+        <li><strong>Featured Contributions.</strong> A small number of especially generative questions or concepts will be highlighted in the Cycle I Review.</li>
+        <li><strong>Follow-up.</strong> Where useful, we will connect contributors working on related problems and use the strongest themes to shape future community activities.</li>
+      </ol>
+      <div class="notice"><p>This is community recognition and editorial selection, not peer review, publication acceptance, funding, or a scientific endorsement.</p></div>
+    </aside>
+  </div>
+</div></section>
+
+<section class="section alt"><div class="container">
+  <div class="section-intro"><div class="eyebrow"><span class="dash"></span>Selection lens</div><h2>What makes a contribution useful?</h2><p>We are looking for questions that can generate research, discussion, collaboration, benchmarks, experiments or future projects.</p></div>
+  <div class="grid-2">
+    <div class="panel"><div class="number">01 / SIGNIFICANCE</div><h3>Research significance</h3><p>Does the contribution identify a consequential problem rather than merely rebrand an Earth use case?</p></div>
+    <div class="panel"><div class="number">02 / SPACE-NATIVE</div><h3>Space-native necessity</h3><p>Do physical conditions, mission constraints or scientific opportunities materially change the problem?</p></div>
+    <div class="panel"><div class="number">03 / AI & LEARNING</div><h3>Machine-learning relevance</h3><p>Is there a genuine learning, autonomy, reasoning, adaptation or decision problem?</p></div>
+    <div class="panel"><div class="number">04 / GENERATIVE VALUE</div><h3>Potential to lead somewhere</h3><p>Could the idea become a useful discussion, collaboration, benchmark, experiment or project direction?</p></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container"><div class="callout">
+  <div class="eyebrow">Prefer GitHub's native template?</div>
+  <h2>You can also submit directly on GitHub.</h2>
+  <p>The website form above is the easiest route. Experienced GitHub users can instead open one of the native issue templates.</p>
+  <div class="hero-actions">
+    <a class="btn" href="https://github.com/Space-Native-AI/space-native-ai.github.io/issues/new?template=research-question.yml" target="_blank" rel="noopener noreferrer">Research Question template ↗</a>
+    <a class="btn" href="https://github.com/Space-Native-AI/space-native-ai.github.io/issues/new?template=exploratory-concept.yml" target="_blank" rel="noopener noreferrer">Project Concept template ↗</a>
+    <a class="btn" href="https://github.com/Space-Native-AI/space-native-ai.github.io/issues" target="_blank" rel="noopener noreferrer">View public contributions ↗</a>
+  </div>
+  <p class="fineprint" style="margin-top:20px">Read the <a class="link-text" href="privacy.html">submission and privacy notice ↗</a> before posting.</p>
+</div></div></section>
+</main>
 <footer class="footer"><div class="container"><div class="footer-main"><div><a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true"></span><span class="wordmark">Space-Native AI</span></a><p class="footer-description">Independent research initiative founded by Bingyi Zhao.</p></div><div class="footer-links"><div><span>Explore</span><a href="index.html">Initiative</a><a href="event-2026.html">World Space Week 2026</a></div><div><span>Information</span><a href="about.html">About</a><a href="privacy.html">Privacy</a></div></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> Space-Native AI</span><span>Independent research initiative.</span></div></div></footer><script src="script.js"></script></body></html>
