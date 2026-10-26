@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102029">
+  <meta name="description" content="OLAB — Orbital Laboratory for Adaptive Biology. Bounded closed-loop biological experimentation in low Earth orbit.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="OLAB | Orbital Laboratory for Adaptive Biology">
+  <meta property="og:description" content="A configurable experimental system for bounded, closed-loop biological research in low Earth orbit.">
+  <meta property="og:url" content="https://space-native-ai.github.io/OLAB/">
+  <title>OLAB | Orbital Laboratory for Adaptive Biology</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="shell nav">
+    <a class="identity" href="#top" aria-label="OLAB home">
+      <span class="mark" aria-hidden="true">O</span>
+      <span><strong>OLAB</strong><small>Orbital Laboratory for Adaptive Biology</small></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#architecture">Architecture</a>
+      <a href="#programme">Programme</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">OLAB / SYSTEM CONCEPT 01</p>
+      <h1>Orbital Laboratory<br>for Adaptive Biology</h1>
+      <p class="lead">A configurable experimental system for bounded, closed-loop biological research in low Earth orbit.</p>
+      <p class="summary">OLAB links calibrated observations, uncertainty-aware state estimation and predefined experimental actions so that an orbital experiment can respond to measured conditions without relying on unconstrained autonomous control.</p>
+      <div class="status-row">
+        <span><b>Stage</b> Ground demonstrator definition</span>
+        <span><b>Focus</b> Protein R&amp;D in microgravity</span>
+        <span><b>Base</b> Hessen, Germany</span>
+      </div>
+    </div>
+
+    <figure class="instrument-figure">
+      <div class="figure-head"><span>FIG. 01</span><span>CONCEPTUAL MODULE ARCHITECTURE</span></div>
+      <svg viewBox="0 0 620 470" role="img" aria-labelledby="fig-title fig-desc">
+        <title id="fig-title">Conceptual architecture of the OLAB experimental module</title>
+        <desc id="fig-desc">A contained experiment adapter connected to sensing, state estimation, bounded decision logic, actuation and verification.</desc>
+        <g fill="none" stroke="currentColor">
+          <rect x="113" y="70" width="394" height="320" rx="8" class="housing"/>
+          <rect x="138" y="104" width="151" height="112" rx="4" class="module"/>
+          <rect x="331" y="104" width="151" height="112" rx="4" class="module"/>
+          <rect x="138" y="254" width="151" height="100" rx="4" class="module"/>
+          <rect x="331" y="254" width="151" height="100" rx="4" class="module"/>
+          <path d="M289 160h42M407 216v38M331 304h-42M214 254v-38" class="signal"/>
+          <path d="M317 151l14 9-14 9M398 240l9 14 9-14M303 295l-14 9 14 9M205 230l9-14 9 14" class="signal"/>
+          <path d="M78 160h35M507 160h35M78 304h35M507 304h35" class="tick"/>
+          <path d="M113 88H91v22M507 88h22v22M113 372H91v-22M507 372h22v-22" class="corner"/>
+        </g>
+        <g class="svg-label">
+          <text x="157" y="137">01 / OBSERVE</text>
+          <text x="157" y="161" class="svg-title">Experimental sensing</text>
+          <text x="157" y="184">Reference-calibrated signals</text>
+          <text x="350" y="137">02 / ESTIMATE</text>
+          <text x="350" y="161" class="svg-title">State inference</text>
+          <text x="350" y="184">Uncertainty represented explicitly</text>
+          <text x="157" y="285">04 / ACT</text>
+          <text x="157" y="309" class="svg-title">Permitted actions</text>
+          <text x="157" y="332">Within host and safety limits</text>
+          <text x="350" y="285">03 / DECIDE</text>
+          <text x="350" y="309" class="svg-title">Bounded logic</text>
+          <text x="350" y="332">Continue · retest · stop</text>
+        </g>
+        <text x="310" y="423" text-anchor="middle" class="svg-note">VERIFICATION + COMPLETE EXPERIMENT LOG</text>
+      </svg>
+      <figcaption>Conceptual architecture only — not flight-qualified hardware.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="problem">
+  <div class="shell section-grid">
+    <div class="section-id"><span>01</span><p>Operating constraint</p></div>
+    <div class="section-body">
+      <h2>Orbital experiments cannot assume that the next useful measurement is known in advance.</h2>
+      <p class="intro">LEO experiments operate with finite samples and reagents, limited intervention opportunities, intermittent communications, strict containment and fixed host resources. If the observed state deviates from expectation, a rigid pre-programmed sequence can consume scarce experimental time without collecting the most informative next evidence.</p>
+      <div class="facts">
+        <div><b>Finite material</b><span>Samples and reagents are mission-limited.</span></div>
+        <div><b>Restricted intervention</b><span>Ground response is not continuously available.</span></div>
+        <div><b>Bounded action space</b><span>Only validated actions are permitted onboard.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="architecture">
+  <div class="shell section-grid">
+    <div class="section-id"><span>02</span><p>Lab in the loop</p></div>
+    <div class="section-body">
+      <h2>Closed-loop experimentation, with explicit limits.</h2>
+      <p class="intro">The control concept is intentionally conservative: observe the experiment, estimate its state with calibrated references, select only from approved actions, execute, verify and record the result.</p>
+      <div class="loop" aria-label="Closed-loop experimental sequence">
+        <div><i>01</i><b>Observe</b><span>Acquire selected measurements.</span></div>
+        <div><i>02</i><b>Estimate</b><span>Represent state and uncertainty.</span></div>
+        <div><i>03</i><b>Decide</b><span>Choose a permitted next action.</span></div>
+        <div><i>04</i><b>Act</b><span>Execute under defined constraints.</span></div>
+        <div><i>05</i><b>Verify</b><span>Check response against reference criteria.</span></div>
+        <div><i>06</i><b>Repeat</b><span>Update the experimental state.</span></div>
+      </div>
+      <p class="boundary"><b>Design principle:</b> autonomy is bounded by experiment rules, host interfaces, containment requirements and explicit stop conditions.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="application">
+  <div class="shell section-grid">
+    <div class="section-id"><span>03</span><p>First application</p></div>
+    <div class="section-body two-col">
+      <div>
+        <h2>Protein R&amp;D in microgravity.</h2>
+        <p class="intro">The first OLAB configuration is being defined around a protein experiment adapter. The objective is not to claim a generic microgravity advantage, but to establish whether a controlled experiment can make traceable, evidence-based decisions when measurements differ from the planned trajectory.</p>
+        <p>Potential later adapters may address expression or function studies, crystallisation and formulation. These are development directions, not completed products.</p>
+      </div>
+      <dl class="specs">
+        <div><dt>Experimental core</dt><dd>Configurable observation-and-decision module</dd></div>
+        <div><dt>State estimation</dt><dd>Reference-calibrated, uncertainty-aware</dd></div>
+        <div><dt>Decision space</dt><dd>Predefined and bounded</dd></div>
+        <div><dt>Execution record</dt><dd>Repeatable, timestamped and traceable</dd></div>
+        <div><dt>Current target</dt><dd>Ground demonstrator and host-interface readiness</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section muted" id="programme">
+  <div class="shell section-grid">
+    <div class="section-id"><span>04</span><p>Engineering programme</p></div>
+    <div class="section-body">
+      <h2>Development is organised around evidence, interfaces and qualification readiness.</h2>
+      <div class="programme">
+        <article><span>01</span><h3>Reference &amp; endpoint definition</h3><p>Define measurable states, acceptance criteria, uncertainty representation and explicit stop conditions.</p></article>
+        <article><span>02</span><h3>Ground integrated demonstrator</h3><p>Integrate sensing, decision logic and one experimental adapter in a controlled terrestrial test environment.</p></article>
+        <article><span>03</span><h3>Independent interface review</h3><p>Screen containment, power, data, thermal and host-interface assumptions against external requirements.</p></article>
+        <article><span>04</span><h3>Flight-readiness pathway</h3><p>Translate validated ground evidence into a later qualification and host-admission programme.</p></article>
+      </div>
+      <div class="current-status"><b>Verification status</b><span>Ground engineering and validation programme in definition. Flight qualification and orbital deployment have not been completed; later operation requires separate host admission, qualification and funding.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="team">
+  <div class="shell section-grid">
+    <div class="section-id"><span>05</span><p>Team</p></div>
+    <div class="section-body">
+      <h2>Scientific and programme responsibility.</h2>
+      <div class="team-grid">
+        <article><p class="person-index">01</p><h3>Bingyi Zhao</h3><h4>Founder &amp; Project Lead</h4><p>Requirements, supplier coordination, budget and delivery, programme interface and project formation.</p></article>
+        <article><p class="person-index">02</p><h3>Dr. Haipei Liu</h3><h4>Scientific &amp; Technical Adviser</h4><p>Protein science, experimental architecture, technical review and computational methodology.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="shell contact-grid">
+    <div>
+      <p class="kicker">CONTACT / HESSEN, GERMANY</p>
+      <h2>Technical and programme enquiries.</h2>
+    </div>
+    <div class="contact-card">
+      <span>Primary contact</span>
+      <h3>Bingyi Zhao</h3>
+      <p>Project Lead</p>
+      <a href="mailto:bingyi.tudo@gmail.com">bingyi.tudo@gmail.com</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="shell footer-grid">
+    <span><strong>OLAB</strong> · Orbital Laboratory for Adaptive Biology</span>
+    <span>Experimental system development · Hessen, Germany</span>
+    <span>© <span id="year">2026</span> OLAB</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
